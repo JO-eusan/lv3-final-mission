@@ -6,6 +6,19 @@
 
 현재 서비스는 사용자의 이름만으로 발주자를 확인합니다.
 
+### Infra
+
+- [x] 애플리케이션을 AWS에 배포 가능한 상태로 구축
+  - Spring Boot Application이 돌아가는가?
+- [x] 애플리케이션 서버 / 데이터베이스 서버 분리
+  - 애플리케이션 서버(public): `sana-lv3-mission`
+  - 데이터베이스 서버(private RDS): `sana-lv3-db`
+- [x] dev/prod의 설정을 서로 독립적으로 관리 및 배포
+  - 개발 서버 접속: http://43.203.120.68/dev
+  - 운영 서버 접속: http://43.203.120.68/prod
+
+![structure](./images/infra_structure.png)
+
 ### 사용자 기능 분석
 
 - [x] 사용자는 상품의 발주를 예약할 수 있다.
@@ -24,14 +37,3 @@
 ### Database ERD
 
 ![ERD](./images/ordering_ERD.png)
-
-### Infra
-
-- [x] 애플리케이션을 AWS에 배포 가능한 상태로 구축
-  - Spring Boot Application이 돌아가는가?
-- [x] 애플리케이션 서버 / 데이터베이스 서버 분리
-  - 애플리케이션 서버(public): `sana-lv3-mission`
-  - 데이터베이스 서버(private RDS): `sana-lv3-db`
-- [x] dev/prod의 설정을 서로 독립적으로 관리 및 배포
-  - 개발 서버 접속: http://43.203.120.68/dev
-  - 운영 서버 접속: http://43.203.120.68/prod
